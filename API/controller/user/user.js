@@ -1,11 +1,21 @@
-const user = (req, res) => {
+// model
+const UserModel = require("../../model/user/index");
+
+// create
+const creatingData = async (req, res) => {
+  const user = new UserModel({
+    name: req.body.name,
+    email: req.body.email,
+    phone_number: req.body.phone_number,
+    password: req.body.password,
+    photo_profile: req.body.photo_profile,
+  });
   try {
-    res.send({
-      message: "user GET controller",
-    });
+    const newUser = await user.save();
+    res.status(201).json(newUser);
   } catch (error) {
-    res.status(400).send("Error");
+    res.status(400).json({ message: error.message });
   }
 };
 
-module.exports = { user };
+module.exports = { creatingData };
