@@ -18,7 +18,8 @@
   "homepage": "https://github.com/Jafarammer/foodies_buddy_BE#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "mongoose": "^5.5.7"
+    "mongoose": "^5.5.7",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "dotenv": "^16.3.1",
