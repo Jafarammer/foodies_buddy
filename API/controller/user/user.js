@@ -1,5 +1,5 @@
 // model
-const UserModel = require("../../model/user/index");
+const UserModel = require("../../model/user");
 
 // create
 const creatingData = async (req, res) => {
